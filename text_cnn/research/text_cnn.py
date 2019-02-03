@@ -203,7 +203,7 @@ class TextCNN(object):
 
         _, step, summaries, loss, accuracy = self.sess.run(
             [self.train_op, self.global_step,
-             self.train_summary_op, self.loss, self.accuracy],
+             self.dev_summary_op, self.loss, self.accuracy],
             feed_dict=feed_dict
         )
 
