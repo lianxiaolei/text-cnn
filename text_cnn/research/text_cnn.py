@@ -79,7 +79,7 @@ class TextCNN(object):
                 name='w')
             b = tf.Variable(
                 tf.constant(value=0.1, shape=(self.num_classes,), name='b'))
-
+            print(self.h_drop.shape, w.shape)
             self.score = tf.nn.xw_plus_b(self.h_drop, w, b, name='dense')
             self.prediction = tf.argmax(self.score, axis=1, name='pred')
 

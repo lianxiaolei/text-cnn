@@ -125,7 +125,7 @@ def load_train_dev_data(train_file_path, test_file_path):
     # The fit_transform function has the ability to slice
     _ = vocab_processor.fit_transform(x_train_text + x_test_text)
     x_train = np.array(list(vocab_processor.transform(x_train_text)))
-    print(x_train_text[0])
+    # print(x_train_text[0])
     x_test = np.array(list(vocab_processor.transform(x_test_text)))
 
     shuffle_indices = np.random.permutation(np.arange(len(y_train)))
